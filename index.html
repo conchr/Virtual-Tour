@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αρχαιολογική Συλλογή Φαρσάλων - Κάστρο Καλλιθέας</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f5e9d7;
+            background-image: url('https://www.transparenttextures.com/patterns/papyrus.png');
+            margin: 0;
+            padding: 20px;
+            color: #3a2c1a;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 248, 240, 0.8);
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #5d4037;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            color: #795548;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        
+        .virtual-tour {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #8d6e63;
+            font-weight: bold;
+        }
+        
+        .image-container {
+            position: relative;
+            width: 100%;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 10px solid #d7ccc8;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image-title {
+            text-align: center;
+            background-color: rgba(90, 70, 50, 0.7);
+            color: #f5e9d7;
+            padding: 10px;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        
+        .description {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(210, 180, 140, 0.2);
+            border-left: 5px solid #8d6e63;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .points-of-interest {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .poi-item {
+            background-color: rgba(210, 180, 140, 0.3);
+            border: 1px solid #8d6e63;
+            border-radius: 5px;
+            padding: 15px;
+            width: 180px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .poi-item:hover {
+            background-color: rgba(173, 216, 230, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        .poi-title {
+            font-weight: bold;
+            color: #5d4037;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #d7ccc8;
+            color: #795548;
+            font-size: 0.9em;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background-color: #8d6e63;
+            color: #f5e9d7;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #6d4c41;
+        }
+        
+        /* Στυλ για τα highlights */
+        .highlight-area {
+            position: absolute;
+            background-color: rgba(173, 216, 230, 0.5);
+            border: 2px solid rgba(100, 149, 237, 0.8);
+            pointer-events: auto;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .highlight-area:hover {
+            background-color: rgba(100, 149, 237, 0.6);
+        }
+        
+        .highlight-label {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            pointer-events: none;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Αρχαιολογική Συλλογή Φαρσάλων</h1>
+        <h2>Κάστρο Καλλιθέας - Ματιές σε μια Αρχαία Πόλη</h2>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-container" id="image-container">
+            <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/PXL_20251106_083021036.PANO.jpg" alt="Κάστρο Καλλιθέας" id="main-image">
+            <!-- Τα highlights θα προστεθούν δυναμικά με JavaScript -->
+        </div>
+        <div class="image-title">Είσοδος στο Κάστρο</div>
+        
+        <div class="points-of-interest">
+            <div class="poi-item" data-area="Χάρτης Καλλιθέας">
+                <div class="poi-title">Χάρτης Καλλιθέας</div>
+                <div>Δείτε τον αρχαίο χάρτη της περιοχής</div>
+            </div>
+            <div class="poi-item" data-area="Μακέτες Εισόδου - Πυλών">
+                <div class="poi-title">Μακέτες Εισόδου - Πυλών</div>
+                <div>Ανακατασκευές των πυλών εισόδου</div>
+            </div>
+            <div class="poi-item" data-area="Η Αγορά του Κάστρου">
+                <div class="poi-title">Η Αγορά του Κάστρου</div>
+                <div>Κεντρική αγορά του αρχαίου οικισμού</div>
+            </div>
+            <div class="poi-item" data-area="Ευρήματα 1">
+                <div class="poi-title">Ευρήματα 1</div>
+                <div>Σημαντικά αρχαιολογικά ευρήματα</div>
+            </div>
+            <div class="poi-item" data-area="Το Κτήριο 10">
+                <div class="poi-title">Το Κτήριο 10</div>
+                <div>Αρχαίο δημόσιο κτήριο</div>
+            </div>
+            <div class="poi-item" data-area="Κεραμικά Ευρήματα">
+                <div class="poi-title">Κεραμικά Ευρήματα</div>
+                <div>Συλλογή από αρχαία κεραμικά</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <p>Το Κάστρο της Καλλιθέας αποτελεί σημαντικό αρχαιολογικό χώρο στην περιοχή των Φαρσάλων. Η εικονική περιήγηση σας επιτρέπει να εξερευνήσετε τα διάφορα σημεία ενδιαφέροντος που επισημαίνονται στην εικόνα.</p>
+            <p>Κάθε επισημασμένη περιοχή αντιπροσωπεύει ένα μοναδικό κομμάτι της ιστορίας του αρχαίου οικισμού, από τον χάρτη της περιοχής μέχρι τα ευρήματα που αποκαλύφθηκαν κατά τις ανασκαφές.</p>
+            <p><strong>Οδηγίες χρήσης:</strong> Κάντε κλικ σε οποιοδήποτε από τα επισημασμένα σημεία στην εικόνα ή στις κάρτες παρακάτω για να δείτε περισσότερες πληροφορίες.</p>
+        </div>
+        
+        <footer>
+            <p>Αρχαιολογική Συλλογή Φαρσάλων &copy; 2023 - Όλα τα δικαιώματα διατηρούνται</p>
+        </footer>
+    </div>
+
+    <script>
+        // Στοιχεία για τα highlights
+        const areas = [
+            {
+                title: "Χάρτης Καλλιθέας",
+                coords: [69,689,65,561,537,539,528,698,378,716],
+                shape: "poly",
+                href: "kallithea-map.html"
+            },
+            {
+                title: "Μακέτες Εισόδου - Πυλών",
+                coords: [1006,800,1748,791,1717,561,1019,566],
+                shape: "poly",
+                href: "#"
+            },
+            {
+                title: "Η Αγορά του Κάστρου",
+                coords: [2207,734,2591,614,2468,460,2096,552,2101,681],
+                shape: "poly",
+                href: "#"
+            },
+            {
+                title: "Ευρήματα 1",
+                coords: [2808,601,3037,818],
+                shape: "rect",
+                href: "#"
+            },
+            {
+                title: "Το Κτήριο 10",
+                coords: [3704,557,3991,738],
+                shape: "rect",
+                href: "#"
+            },
+            {
+                title: "Κεραμικά Ευρήματα",
+                coords: [4111,539,4362,751],
+                shape: "rect",
+                href: "#"
+            }
+        ];
+
+        // Δημιουργία των highlights όταν φορτωθεί η σελίδα
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageContainer = document.getElementById('image-container');
+            const img = document.getElementById('main-image');
+            const poiItems = document.querySelectorAll('.poi-item');
+            
+            // Δημιουργούμε τα highlights
+            createHighlights(imageContainer, img);
+            
+            // Προσθέτουμε events για τα poi items
+            poiItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const areaTitle = this.getAttribute('data-area');
+                    const area = areas.find(a => a.title === areaTitle);
+                    
+                    if (area && area.href && area.href !== "#") {
+                        window.location.href = area.href;
+                    }
+                });
+            });
+        });
+
+        // Συνάρτηση για δημιουργία highlights
+        function createHighlights(container, image) {
+            // Περιμένουμε να φορτωθεί η εικόνα για να πάρουμε τις πραγματικές διαστάσεις
+            image.onload = function() {
+                const imgWidth = image.naturalWidth;
+                const imgHeight = image.naturalHeight;
+                const containerWidth = container.clientWidth;
+                const containerHeight = container.clientHeight;
+                
+                // Υπολογίζουμε τους λόγους κλίμακας
+                const scaleX = containerWidth / imgWidth;
+                const scaleY = containerHeight / imgHeight;
+                
+                // Δημιουργούμε ένα overlay container
+                const overlay = document.createElement('div');
+                overlay.style.position = 'absolute';
+                overlay.style.top = '0';
+                overlay.style.left = '0';
+                overlay.style.width = '100%';
+                overlay.style.height = '100%';
+                overlay.style.pointerEvents = 'none';
+                container.style.position = 'relative';
+                container.appendChild(overlay);
+                
+                // Δημιουργούμε ένα highlight για κάθε area
+                areas.forEach(area => {
+                    const highlight = document.createElement('div');
+                    highlight.className = 'highlight-area';
+                    highlight.setAttribute('data-title', area.title);
+                    
+                    // Προσθέτουμε event listener για κλικ
+                    highlight.addEventListener('click', function() {
+                        if (area.href && area.href !== "#") {
+                            window.location.href = area.href;
+                        }
+                    });
+                    
+                    // Υπολογίζουμε και ορίζουμε τη θέση και το μέγεθος
+                    if (area.shape === 'poly') {
+                        // Πολύγωνο - χρειαζόμαστε SVG
+                        const points = area.coords;
+                        let scaledPoints = '';
+                        
+                        for (let i = 0; i < points.length; i += 2) {
+                            const x = points[i] * scaleX;
+                            const y = points[i+1] * scaleY;
+                            scaledPoints += `${x},${y} `;
+                        }
+                        
+                        highlight.style.clipPath = `polygon(${scaledPoints})`;
+                        highlight.style.width = '100%';
+                        highlight.style.height = '100%';
+                    } else if (area.shape === 'rect') {
+                        // Ορθογώνιο
+                        const x = area.coords[0] * scaleX;
+                        const y = area.coords[1] * scaleY;
+                        const width = (area.coords[2] - area.coords[0]) * scaleX;
+                        const height = (area.coords[3] - area.coords[1]) * scaleY;
+                        
+                        highlight.style.left = `${x}px`;
+                        highlight.style.top = `${y}px`;
+                        highlight.style.width = `${width}px`;
+                        highlight.style.height = `${height}px`;
+                    }
+                    
+                    // Δημιουργούμε και προσθέτουμε ετικέτα
+                    const label = document.createElement('div');
+                    label.className = 'highlight-label';
+                    label.textContent = area.title;
+                    
+                    // Θέτουμε τη θέση της ετικέτας
+                    if (area.shape === 'rect') {
+                        label.style.left = `${parseFloat(highlight.style.left) + 10}px`;
+                        label.style.top = `${parseFloat(highlight.style.top) + 10}px`;
+                    } else {
+                        // Για πολύγωνα, βάζουμε την ετικέτα στο κέντρο
+                        const points = area.coords;
+                        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+                        
+                        for (let i = 0; i < points.length; i += 2) {
+                            minX = Math.min(minX, points[i] * scaleX);
+                            maxX = Math.max(maxX, points[i] * scaleX);
+                            minY = Math.min(minY, points[i+1] * scaleY);
+                            maxY = Math.max(maxY, points[i+1] * scaleY);
+                        }
+                        
+                        label.style.left = `${minX + (maxX - minX) / 2 - 50}px`;
+                        label.style.top = `${minY + (maxY - minY) / 2 - 10}px`;
+                    }
+                    
+                    overlay.appendChild(highlight);
+                    overlay.appendChild(label);
+                });
+            };
+            
+            // Αν η εικόνα είναι ήδη φορτωμένη
+            if (image.complete) {
+                image.onload();
+            }
+        }
+    </script>
+</body>
+</html>
