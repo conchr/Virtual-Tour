@@ -154,15 +154,6 @@
             width: auto;
         }
         
-        .image-title {
-            text-align: center;
-            background-color: rgba(90, 70, 50, 0.7);
-            color: #f5e9d7;
-            padding: 10px;
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        
         .description {
             margin-top: 30px;
             padding: 20px;
@@ -232,7 +223,8 @@
         }
         
         /* Στυλ για τις σελίδες με εικόνες */
-        #collection1-page, #kallithea-map-page, #gates-page {
+        #collection1-page, #kallithea-map-page, #gates-page, #agora-page, 
+        #evrimata1-page, #ktirio10-page, #keramika-page {
             display: none;
         }
         
@@ -357,12 +349,11 @@
         
         <div class="scroll-container">
             <div class="image-container" id="image-container">
-                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/PXL_20251106_083021036.PANO.jpg" alt="Κάστρο Καλλιθέας" id="main-image">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/PXL_20251106_083141857.PANO.jpg" alt="Κάστρο Καλλιθέας" id="main-image">
                 <!-- Τα highlights και labels θα προστεθούν δυναμικά με JavaScript -->
             </div>
         </div>
         <div class="scroll-hint">Χρησιμοποιήστε το scroll για να δείτε ολόκληρη την εικόνα</div>
-        <div class="image-title">Είσοδος στη Συλλογή</div>
         
         <div class="description">
             <p><strong>Οδηγίες χρήσης:</strong> Κάντε κλικ σε οποιοδήποτε από τα επισημασμένα σημεία στην εικόνα για να δείτε περισσότερες πληροφορίες.</p>
@@ -446,42 +437,190 @@
         </footer>
     </div>
 
+    <!-- Σελίδα Η Αγορά του Κάστρου -->
+    <div class="container" id="agora-page">
+        <h2 class="page-title">Κάστρο Καλλιθέας</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <!-- Εικόνες στη σελίδα -->
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Αγορά+1" alt="Αγορά του Κάστρου 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Αγορά+2" alt="Αγορά του Κάστρου 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Αγορά+3" alt="Αγορά του Κάστρου 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="image-caption">
+            <p>-1- Η κεντρική αγορά του αρχαίου οικισμού.</p>
+            <p>-2- Εμπορικά κτήρια και καταστήματα.</p>
+            <p>-3- Δημόσια κτήρια στην αγορά.</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button" id="back-to-collection1-agora">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+        </div>
+        
+        <footer>
+            <!-- Το κείμενο αφαιρέθηκε -->
+        </footer>
+    </div>
+
+    <!-- Σελίδα Ευρήματα 1 -->
+    <div class="container" id="evrimata1-page">
+        <h2 class="page-title">Κάστρο Καλλιθέας</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <!-- Εικόνες στη σελίδα -->
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Εύρημα+1" alt="Εύρημα 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Εύρημα+2" alt="Εύρημα 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Εύρημα+3" alt="Εύρημα 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="image-caption">
+            <p>-1- Σημαντικά αρχαιολογικά ευρήματα από ανασκαφές.</p>
+            <p>-2- Εργαλεία και αντικείμενα καθημερινής χρήσης.</p>
+            <p>-3- Νομίσματα και κοσμήματα.</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button" id="back-to-collection1-evrimata">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+        </div>
+        
+        <footer>
+            <!-- Το κείμενο αφαιρέθηκε -->
+        </footer>
+    </div>
+
+    <!-- Σελίδα Το Κτήριο 10 -->
+    <div class="container" id="ktirio10-page">
+        <h2 class="page-title">Κάστρο Καλλιθέας</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <!-- Εικόνες στη σελίδα -->
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κτήριο+10+1" alt="Κτήριο 10 - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κτήριο+10+2" alt="Κτήριο 10 - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κτήριο+10+3" alt="Κτήριο 10 - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="image-caption">
+            <p>-1- Αρχιτεκτονική του Κτηρίου 10.</p>
+            <p>-2- Εσωτερικοί χώροι και διαρρύθμιση.</p>
+            <p>-3- Λεπτομέρειες κατασκευής.</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button" id="back-to-collection1-ktirio">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+        </div>
+        
+        <footer>
+            <!-- Το κείμενο αφαιρέθηκε -->
+        </footer>
+    </div>
+
+    <!-- Σελίδα Κεραμικά Ευρήματα -->
+    <div class="container" id="keramika-page">
+        <h2 class="page-title">Κάστρο Καλλιθέας</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <!-- Εικόνες στη σελίδα -->
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κεραμικά+1" alt="Κεραμικά Ευρήματα 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κεραμικά+2" alt="Κεραμικά Ευρήματα 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κεραμικά+3" alt="Κεραμικά Ευρήματα 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="image-caption">
+            <p>-1- Συλλογή αρχαίων αγγείων.</p>
+            <p>-2- Κεραμικά από διαφορετικές περιόδους.</p>
+            <p>-3- Ειδικά διακοσμημένα αγγεία.</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button" id="back-to-collection1-keramika">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+        </div>
+        
+        <footer>
+            <!-- Το κείμενο αφαιρέθηκε -->
+        </footer>
+    </div>
+
     <script>
-        // Στοιχεία για τα highlights
+        // Στοιχεία για τα highlights - Νέα συντεταγμένες για τη νέα εικόνα
         const areas = [
             {
                 title: "Χάρτης Καλλιθέας",
-                coords: [69,689,65,561,537,539,528,698,378,716],
-                shape: "poly",
+                coords: [419,514,663,818],
+                shape: "rect",
                 href: "#"
             },
             {
                 title: "Μακέτες Εισόδου - Πυλών",
-                coords: [1006,800,1748,791,1717,561,1019,566],
-                shape: "poly",
+                coords: [900,542,1218,846],
+                shape: "rect",
                 href: "#"
             },
             {
                 title: "Η Αγορά του Κάστρου",
-                coords: [2207,734,2591,614,2468,460,2096,552,2101,681],
-                shape: "poly",
+                coords: [1430,560,1730,797],
+                shape: "rect",
                 href: "#"
             },
             {
                 title: "Ευρήματα 1",
-                coords: [2808,601,3037,818],
+                coords: [1850,624,2038,836],
                 shape: "rect",
                 href: "#"
             },
             {
                 title: "Το Κτήριο 10",
-                coords: [3704,557,3991,738],
+                coords: [2653,624,2985,967],
                 shape: "rect",
                 href: "#"
             },
             {
                 title: "Κεραμικά Ευρήματα",
-                coords: [4111,539,4362,751],
+                coords: [3370,613,3603,864],
                 shape: "rect",
                 href: "#"
             }
@@ -493,6 +632,10 @@
             const collection1Page = document.getElementById('collection1-page');
             const mapPage = document.getElementById('kallithea-map-page');
             const gatesPage = document.getElementById('gates-page');
+            const agoraPage = document.getElementById('agora-page');
+            const evrimataPage = document.getElementById('evrimata1-page');
+            const ktirioPage = document.getElementById('ktirio10-page');
+            const keramikaPage = document.getElementById('keramika-page');
             
             // Προσθέτουμε events για τις συλλογές
             const collectionItems = document.querySelectorAll('.collection-item');
@@ -535,6 +678,30 @@
             document.getElementById('back-to-collection1-gates').addEventListener('click', function(e) {
                 e.preventDefault();
                 gatesPage.style.display = 'none';
+                collection1Page.style.display = 'block';
+            });
+            
+            document.getElementById('back-to-collection1-agora').addEventListener('click', function(e) {
+                e.preventDefault();
+                agoraPage.style.display = 'none';
+                collection1Page.style.display = 'block';
+            });
+            
+            document.getElementById('back-to-collection1-evrimata').addEventListener('click', function(e) {
+                e.preventDefault();
+                evrimataPage.style.display = 'none';
+                collection1Page.style.display = 'block';
+            });
+            
+            document.getElementById('back-to-collection1-ktirio').addEventListener('click', function(e) {
+                e.preventDefault();
+                ktirioPage.style.display = 'none';
+                collection1Page.style.display = 'block';
+            });
+            
+            document.getElementById('back-to-collection1-keramika').addEventListener('click', function(e) {
+                e.preventDefault();
+                keramikaPage.style.display = 'none';
                 collection1Page.style.display = 'block';
             });
             
@@ -588,6 +755,22 @@
                             // Εμφάνιση της σελίδας των μακετών
                             document.getElementById('collection1-page').style.display = 'none';
                             document.getElementById('gates-page').style.display = 'block';
+                        } else if (area.title === "Η Αγορά του Κάστρου") {
+                            // Εμφάνιση της σελίδας της αγοράς
+                            document.getElementById('collection1-page').style.display = 'none';
+                            document.getElementById('agora-page').style.display = 'block';
+                        } else if (area.title === "Ευρήματα 1") {
+                            // Εμφάνιση της σελίδας των ευρημάτων
+                            document.getElementById('collection1-page').style.display = 'none';
+                            document.getElementById('evrimata1-page').style.display = 'block';
+                        } else if (area.title === "Το Κτήριο 10") {
+                            // Εμφάνιση της σελίδας του κτηρίου
+                            document.getElementById('collection1-page').style.display = 'none';
+                            document.getElementById('ktirio10-page').style.display = 'block';
+                        } else if (area.title === "Κεραμικά Ευρήματα") {
+                            // Εμφάνιση της σελίδας των κεραμικών
+                            document.getElementById('collection1-page').style.display = 'none';
+                            document.getElementById('keramika-page').style.display = 'block';
                         }
                     });
                     
@@ -603,30 +786,7 @@
                     // Υπολογίζουμε και ορίζουμε τη θέση και το μέγεθος
                     let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
                     
-                    if (area.shape === 'poly') {
-                        // Πολύγωνο - χρησιμοποιούμε clip-path
-                        const points = area.coords;
-                        let pointsStr = '';
-                        
-                        for (let i = 0; i < points.length; i += 2) {
-                            const x = points[i] * scaleX;
-                            const y = points[i+1] * scaleY;
-                            pointsStr += `${x}px ${y}px, `;
-                            
-                            // Βρίσκουμε τα όρια του πολυγώνου
-                            minX = Math.min(minX, x);
-                            maxX = Math.max(maxX, x);
-                            minY = Math.min(minY, y);
-                            maxY = Math.max(maxY, y);
-                        }
-                        
-                        // Αφαιρούμε το τελευταίο κόμμα
-                        pointsStr = pointsStr.slice(0, -2);
-                        
-                        highlight.style.clipPath = `polygon(${pointsStr})`;
-                        highlight.style.width = '100%';
-                        highlight.style.height = '100%';
-                    } else if (area.shape === 'rect') {
+                    if (area.shape === 'rect') {
                         // Ορθογώνιο
                         const x = area.coords[0] * scaleX;
                         const y = area.coords[1] * scaleY;
