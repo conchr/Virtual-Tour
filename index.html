@@ -180,6 +180,7 @@
             border-radius: 5px;
             text-decoration: none;
             margin-top: 20px;
+            margin-right: 10px;
             transition: background-color 0.3s;
         }
         
@@ -361,6 +362,7 @@
         
         <div class="description">
             <a href="#" class="back-button" id="back-to-main">Επιστροφή στην Κύρια Σελίδα</a>
+            <a href="#" class="back-button" id="to-main-page">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -393,6 +395,7 @@
         
         <div class="description">
             <a href="#" class="back-button" id="back-to-collection1">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button" id="to-main-page-from-map">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -430,6 +433,7 @@
         
         <div class="description">
             <a href="#" class="back-button" id="back-to-collection1-gates">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button" id="to-main-page-from-gates">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -467,6 +471,7 @@
         
         <div class="description">
             <a href="#" class="back-button" id="back-to-collection1-agora">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button" id="to-main-page-from-agora">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -504,6 +509,7 @@
         
         <div class="description">
             <a href="#" class="back-button" id="back-to-collection1-evrimata">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button" id="to-main-page-from-evrimata">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -541,6 +547,7 @@
         
         <div class="description">
             <a href="#" class="back-button" id="back-to-collection1-ktirio">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button" id="to-main-page-from-ktirio">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -578,6 +585,7 @@
         
         <div class="description">
             <a href="#" class="back-button" id="back-to-collection1-keramika">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button" id="to-main-page-from-keramika">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -703,6 +711,49 @@
                 e.preventDefault();
                 keramikaPage.style.display = 'none';
                 collection1Page.style.display = 'block';
+            });
+            
+            // Προσθέτουμε events για τα νέα κουμπιά "Κεντρική Σελίδα"
+            document.getElementById('to-main-page').addEventListener('click', function(e) {
+                e.preventDefault();
+                collection1Page.style.display = 'none';
+                mainPage.style.display = 'block';
+            });
+            
+            document.getElementById('to-main-page-from-map').addEventListener('click', function(e) {
+                e.preventDefault();
+                mapPage.style.display = 'none';
+                mainPage.style.display = 'block';
+            });
+            
+            document.getElementById('to-main-page-from-gates').addEventListener('click', function(e) {
+                e.preventDefault();
+                gatesPage.style.display = 'none';
+                mainPage.style.display = 'block';
+            });
+            
+            document.getElementById('to-main-page-from-agora').addEventListener('click', function(e) {
+                e.preventDefault();
+                agoraPage.style.display = 'none';
+                mainPage.style.display = 'block';
+            });
+            
+            document.getElementById('to-main-page-from-evrimata').addEventListener('click', function(e) {
+                e.preventDefault();
+                evrimataPage.style.display = 'none';
+                mainPage.style.display = 'block';
+            });
+            
+            document.getElementById('to-main-page-from-ktirio').addEventListener('click', function(e) {
+                e.preventDefault();
+                ktirioPage.style.display = 'none';
+                mainPage.style.display = 'block';
+            });
+            
+            document.getElementById('to-main-page-from-keramika').addEventListener('click', function(e) {
+                e.preventDefault();
+                keramikaPage.style.display = 'none';
+                mainPage.style.display = 'block';
             });
             
             // Προσθέτουμε events για τις εικόνες στις σελίδες
