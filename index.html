@@ -5,6 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Αρχαιολογική Συλλογή Φαρσάλων - Κάστρο Καλλιθέας</title>
     <style>
+        /* Βελτιωμένα στυλ για responsiveness */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 1.6em !important;
+            }
+            
+            .page-title {
+                font-size: 2em !important;
+            }
+            
+            .subtitle {
+                font-size: 1.2em !important;
+            }
+            
+            .virtual-tour {
+                font-size: 1.4em !important;
+            }
+            
+            .welcome-text {
+                font-size: 1em !important;
+                padding: 15px !important;
+            }
+            
+            .collections-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+                gap: 15px !important;
+            }
+            
+            .collection-image {
+                height: 80px !important;
+            }
+            
+            .video-section {
+                height: 50vh !important;
+                min-height: 300px !important;
+            }
+            
+            .gallery-item {
+                max-width: 100% !important;
+                margin-bottom: 20px;
+            }
+            
+            .team-content {
+                font-size: 1em !important;
+            }
+            
+            .back-button {
+                display: block !important;
+                margin: 10px auto !important;
+                width: 90% !important;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 1.3em !important;
+            }
+            
+            .page-title {
+                font-size: 1.6em !important;
+            }
+            
+            .collections-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .collection-image {
+                height: 100px !important;
+            }
+            
+            .video-content {
+                padding: 20px 15px !important;
+            }
+        }
+
+        @media (orientation: landscape) and (max-height: 500px) {
+            .video-section {
+                height: 100vh !important;
+            }
+            
+            .header {
+                padding: 5px 10px !important;
+            }
+            
+            .main-title {
+                font-size: 1.4em !important;
+            }
+        }
+
         body {
             font-family: 'Times New Roman', serif;
             background-color: #f5e9d7;
@@ -276,7 +366,8 @@
         #collection1-page, #kallithea-map-page, #gates-page, #agora-page, 
         #evrimata1-page, #ktirio10-page, #keramika-page,
         #collection2-page, #collection3-page, #collection4-page, 
-        #collection5-page, #collection6-page {
+        #collection5-page, #collection6-page,
+        #archaeological-team1-page, #archaeological-team2-page, #archaeological-team3-page {
             display: none;
         }
         
@@ -333,6 +424,57 @@
             color: #795548;
             margin-top: 10px;
             text-align: left;
+        }
+
+        /* Βελτιωμένα στυλ για τις σελίδες Αρχαιολογικής Ομάδας */
+        .team-content {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: justify;
+            color: #3a2c1a;
+        }
+
+        .team-content p {
+            margin-bottom: 1.5em;
+            text-indent: 1.5em;
+        }
+
+        .team-content strong {
+            color: #5d4037;
+            font-weight: bold;
+        }
+
+        .team-section {
+            background-color: rgba(255, 248, 240, 0.9);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #8d6e63;
+        }
+
+        .team-navigation {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #d7ccc8;
+        }
+
+        .team-title {
+            text-align: center;
+            color: #5d4037;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+
+        .team-subtitle {
+            text-align: center;
+            color: #795548;
+            margin-bottom: 30px;
+            font-size: 1.4em;
+            font-style: italic;
         }
     </style>
 </head>
@@ -422,7 +564,7 @@
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="to-main-page">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -430,7 +572,7 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Συλλογή 2ο Μέρος -->
+    <!-- Σελίδες Συλλογών 2-6 -->
     <div class="container" id="collection2-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
@@ -448,7 +590,7 @@
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="to-main-page-from-collection2">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -456,7 +598,6 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Συλλογή 3ο Μέρος -->
     <div class="container" id="collection3-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
@@ -474,7 +615,7 @@
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="to-main-page-from-collection3">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -482,7 +623,6 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Συλλογή 4ο Μέρος -->
     <div class="container" id="collection4-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
@@ -500,7 +640,7 @@
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="to-main-page-from-collection4">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -508,7 +648,6 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Συλλογή 5ο Μέρος -->
     <div class="container" id="collection5-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
@@ -526,7 +665,7 @@
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="to-main-page-from-collection5">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -534,7 +673,6 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Συλλογή Εξοδος -->
     <div class="container" id="collection6-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
@@ -552,7 +690,7 @@
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="to-main-page-from-collection6">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -560,13 +698,12 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Χάρτης Καλλιθέας -->
+    <!-- Υπόλοιπες υπάρχουσες σελίδες -->
     <div class="container" id="kallithea-map-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
         <div class="virtual-tour">Virtual Tour</div>
         
-        <!-- Εικόνες στη σελίδα -->
         <div class="image-gallery">
             <div class="gallery-item">
                 <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/PXL_20251106_082421452.jpg" alt="Φυσική θέση του Κάστρου Καλλιθέας" class="gallery-image">
@@ -584,8 +721,8 @@
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="back-to-collection1">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
-            <a href="#" class="back-button" id="to-main-page-from-map">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button back-to-collection1">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -593,13 +730,11 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Μακέτες Εισόδου - Πυλών -->
     <div class="container" id="gates-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
         <div class="virtual-tour">Virtual Tour</div>
         
-        <!-- Εικόνες στη σελίδα -->
         <div class="image-gallery">
             <div class="gallery-item">
                 <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/2EastGate.jpg" alt="Μακέτα της Ανατολικής Πύλης" class="gallery-image">
@@ -622,8 +757,8 @@
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="back-to-collection1-gates">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
-            <a href="#" class="back-button" id="to-main-page-from-gates">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button back-to-collection1">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -631,37 +766,217 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Η Αγορά του Κάστρου -->
+    <!-- Υπόλοιπες υπάρχουσες σελίδες παραμένουν -->
+
+    <!-- Νέες Σελίδες Αρχαιολογικής Ομάδας -->
+
+    <!-- Σελίδα Αρχαιολογική Ομάδα 1 -->
+    <div class="container" id="archaeological-team1-page">
+        <h2 class="team-title">Η Αρχαιολογική Ομάδα</h2>
+        <div class="team-subtitle">Κάστρο Καλλιθέας</div>
+        
+        <div class="team-content">
+            <div class="team-section">
+                <p>Αναμφίβολα, η ανασκαφή στο Κάστρο Καλλιθέας των Φαρσάλων αποτελεί ένα εξαιρετικό παράδειγμα επιτυχημένης διεθνούς συνεργασίας!</p>
+            </div>
+
+            <div class="team-section">
+                <p><strong>🤝 Η Αρχαιολογική Ομάδα</strong></p>
+                <p>Η αρχαιολογική έρευνα στη θέση «Κάστρο» Καλλιθέας είναι ένα κοινό ελληνοκαναδικό ερευνητικό πρόγραμμα που ξεκίνησε το 2004 και συνεχίζεται μέχρι σήμερα.</p>
+            </div>
+
+            <div class="team-section">
+                <p>Η ομάδα αποτελείται από:</p>
+                <p><strong>Την Εφορεία Αρχαιοτήτων Λάρισας (Ελλάδα):</strong> Εκπροσωπώντας την ελληνική αρχαιολογική υπηρεσία.</p>
+                <p><strong>Υπεύθυνη/Συνδιευθύντσα:</strong> Η αρχαιολόγος κ. Σοφία Καραπάνου.</p>
+                <p><strong>Το Πανεπιστήμιο της Alberta (Καναδάς):</strong> Το οποίο έχει την επιστημονική ευθύνη και παρέχει την αρωγή (φοιτητές, πόρους).</p>
+                <p><strong>Διευθύντσα/Επιστημονική Υπεύθυνη:</strong> Η καθηγήτρια κ. Margriet J. Haagsma.</p>
+                <p><strong>Υπό την αιγίδα:</strong> Του Καναδικού Αρχαιολογικού Ινστιτούτου στην Ελλάδα.</p>
+                <p><strong>Με την αρωγή:</strong> Του Δήμου Φαρσάλων.</p>
+            </div>
+
+            <div class="team-section">
+                <p>Η συνεργασία αυτή έχει αποδώσει πλούσια ευρήματα, δίνοντας μια πλήρη εικόνα της αρχαίας πόλης, η οποία πιθανόν ταυτίζεται με την αρχαία Πεύμα.</p>
+            </div>
+        </div>
+
+        <!-- Image Gallery - 6 εικόνες σε 2 σειρές -->
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+1" alt="Ομάδα 1" class="gallery-image">
+                <div class="image-number">Ομάδα 1</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+2" alt="Ομάδα 2" class="gallery-image">
+                <div class="image-number">Ομάδα 2</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+3" alt="Ομάδα 3" class="gallery-image">
+                <div class="image-number">Ομάδα 3</div>
+            </div>
+        </div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+4" alt="Ομάδα 4" class="gallery-image">
+                <div class="image-number">Ομάδα 4</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+5" alt="Ομάδα 5" class="gallery-image">
+                <div class="image-number">Ομάδα 5</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+6" alt="Ομάδα 6" class="gallery-image">
+                <div class="image-number">Ομάδα 6</div>
+            </div>
+        </div>
+
+        <div class="team-navigation">
+            <a href="#" class="back-button next-to-team2">Επόμενη</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+        
+        <footer>
+            <!-- Το κείμενο αφαιρέθηκε -->
+        </footer>
+    </div>
+
+    <!-- Σελίδα Αρχαιολογική Ομάδα 2 -->
+    <div class="container" id="archaeological-team2-page">
+        <h2 class="team-title">Πως βρέθηκε αυτό το μέρος;</h2>
+        <div class="team-subtitle">Κάστρο Καλλιθέας</div>
+        
+        <div class="team-content">
+            <div class="team-section">
+                <p><strong>Πώς Βρέθηκε σε Αυτό το Μέρος;</strong></p>
+                <p>Η αρχαιολογική έρευνα στη θέση "Κάστρο" Καλλιθέας ξεκίνησε λόγω:</p>
+            </div>
+
+            <div class="team-section">
+                <p><strong>1. Η Ύπαρξη Ορατών Αρχαιοτήτων</strong></p>
+                <p>Η θέση "Κάστρο" της Καλλιθέας δεν είναι ένας τυχαίος αρχαιολογικός χώρος. Η πόλη, η οποία κατοικήθηκε κυρίως από τον 4ο έως τον 2ο αι. π.Χ. (Κλασική-Ελληνιστική περίοδος), είχε την τύχη να διατηρηθεί σε μεγάλη έκταση. Επιφανειακά ήταν ορατά:</p>
+            </div>
+
+            <div class="team-section">
+                <p>Η οχύρωση (τα τείχη) της πόλης, η οποία είναι σχεδόν ολόκληρη ορατή.</p>
+                <p>Ερείπια της Ακρόπολης.</p>
+                <p>Ίχνη δημόσιων κτιρίων (ναοί, στοά, κτίρια της Αγοράς) και ιδιωτικών οικιών.</p>
+            </div>
+        </div>
+
+        <!-- Image Gallery - 6 εικόνες σε 2 σειρές -->
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+1" alt="Ομάδα 1" class="gallery-image">
+                <div class="image-number">Ομάδα 1</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+2" alt="Ομάδα 2" class="gallery-image">
+                <div class="image-number">Ομάδα 2</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+3" alt="Ομάδα 3" class="gallery-image">
+                <div class="image-number">Ομάδα 3</div>
+            </div>
+        </div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+4" alt="Ομάδα 4" class="gallery-image">
+                <div class="image-number">Ομάδα 4</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+5" alt="Ομάδα 5" class="gallery-image">
+                <div class="image-number">Ομάδα 5</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+6" alt="Ομάδα 6" class="gallery-image">
+                <div class="image-number">Ομάδα 6</div>
+            </div>
+        </div>
+
+        <div class="team-navigation">
+            <a href="#" class="back-button next-to-team3">Επόμενη</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+        
+        <footer>
+            <!-- Το κείμενο αφαιρέθηκε -->
+        </footer>
+    </div>
+
+    <!-- Σελίδα Αρχαιολογική Ομάδα 3 -->
+    <div class="container" id="archaeological-team3-page">
+        <h2 class="team-title">Η Συστηματική Έρευνα και ο Σκοπός</h2>
+        <div class="team-subtitle">Κάστρο Καλλιθέας</div>
+        
+        <div class="team-content">
+            <div class="team-section">
+                <p>Λόγω της εξαιρετικής διατήρησης της οχύρωσης και των επιφανειακών καταλοίπων, η περιοχή αναγνωρίστηκε ως ιδανική για τη μελέτη μιας ελληνιστικής πόλης στην περιφέρεια της Θεσσαλίας (Αχαΐα Φθιώτιδα).</p>
+            </div>
+
+            <div class="team-section">
+                <p>Το κοινό ερευνητικό πρόγραμμα τέθηκε σε εφαρμογή το 2004 με στόχο:</p>
+                <p>Την ανάδειξη του πολεοδομικού σχεδίου της πόλης.</p>
+                <p>Τη μελέτη της ιδιωτικής και δημόσιας αρχιτεκτονικής της.</p>
+                <p>Την κατανόηση της οικονομίας και των κοινωνικών μεταβολών στην ευρύτερη περιοχή της Θεσσαλίας κατά την κλασική και ελληνιστική περίοδο.</p>
+            </div>
+
+            <div class="team-section">
+                <p>Ουσιαστικά, η αρχαιολογική ομάδα βρέθηκε εκεί, διότι η ίδια η θέση "Κάστρο" Καλλιθέας αποτελούσε ένα μοναδικά διατηρημένο παράθυρο στην αρχαία ελληνιστική ζωή.</p>
+            </div>
+        </div>
+
+        <!-- Image Gallery - 3 εικόνες -->
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+1" alt="Ομάδα 1" class="gallery-image">
+                <div class="image-number">Ομάδα 1</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+2" alt="Ομάδα 2" class="gallery-image">
+                <div class="image-number">Ομάδα 2</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ομάδα+3" alt="Ομάδα 3" class="gallery-image">
+                <div class="image-number">Ομάδα 3</div>
+            </div>
+        </div>
+
+        <div class="team-navigation">
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+        
+        <footer>
+            <!-- Το κείμενο αφαιρέθηκε -->
+        </footer>
+    </div>
+
+    <!-- Νέες σελίδες για τα υπόλοιπα αντικείμενα της Συλλογής Είσοδος -->
     <div class="container" id="agora-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
         <div class="virtual-tour">Virtual Tour</div>
         
-        <!-- Εικόνες στη σελίδα -->
         <div class="image-gallery">
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Αγορά+1" alt="Αγορά του Κάστρου 1" class="gallery-image">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Αγορά+1" alt="Αγορά 1" class="gallery-image">
                 <div class="image-number">-1-</div>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Αγορά+2" alt="Αγορά του Κάστρου 2" class="gallery-image">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Αγορά+2" alt="Αγορά 2" class="gallery-image">
                 <div class="image-number">-2-</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Αγορά+3" alt="Αγορά του Κάστρου 3" class="gallery-image">
-                <div class="image-number">-3-</div>
             </div>
         </div>
         
         <div class="image-caption">
-            <p>-1- Η κεντρική αγορά του αρχαίου οικισμού.</p>
-            <p>-2- Εμπορικά κτήρια και καταστήματα.</p>
-            <p>-3- Δημόσια κτήρια στην αγορά.</p>
+            <p>-1- Η Αγορά του Κάστρου Καλλιθέας.</p>
+            <p>-2- Άποψη της Αγοράς από διαφορετική γωνία.</p>
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="back-to-collection1-agora">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
-            <a href="#" class="back-button" id="to-main-page-from-agora">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button back-to-collection1">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -669,37 +984,30 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Ευρήματα 1 -->
     <div class="container" id="evrimata1-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
         <div class="virtual-tour">Virtual Tour</div>
         
-        <!-- Εικόνες στη σελίδα -->
         <div class="image-gallery">
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Εύρημα+1" alt="Εύρημα 1" class="gallery-image">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ευρήματα+1" alt="Ευρήματα 1" class="gallery-image">
                 <div class="image-number">-1-</div>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Εύρημα+2" alt="Εύρημα 2" class="gallery-image">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Ευρήματα+2" alt="Ευρήματα 2" class="gallery-image">
                 <div class="image-number">-2-</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Εύρημα+3" alt="Εύρημα 3" class="gallery-image">
-                <div class="image-number">-3-</div>
             </div>
         </div>
         
         <div class="image-caption">
-            <p>-1- Σημαντικά αρχαιολογικά ευρήματα από ανασκαφές.</p>
-            <p>-2- Εργαλεία και αντικείμενα καθημερινής χρήσης.</p>
-            <p>-3- Νομίσματα και κοσμήματα.</p>
+            <p>-1- Ευρήματα από την ανασκαφή στο Κάστρο Καλλιθέας.</p>
+            <p>-2- Επιπλέον ευρήματα από την έρευνα.</p>
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="back-to-collection1-evrimata">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
-            <a href="#" class="back-button" id="to-main-page-from-evrimata">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button back-to-collection1">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -707,37 +1015,30 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Το Κτήριο 10 -->
     <div class="container" id="ktirio10-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
         <div class="virtual-tour">Virtual Tour</div>
         
-        <!-- Εικόνες στη σελίδα -->
         <div class="image-gallery">
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κτήριο+10+1" alt="Κτήριο 10 - 1" class="gallery-image">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Κτήριο+10+1" alt="Κτήριο 10 - 1" class="gallery-image">
                 <div class="image-number">-1-</div>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κτήριο+10+2" alt="Κτήριο 10 - 2" class="gallery-image">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Κτήριο+10+2" alt="Κτήριο 10 - 2" class="gallery-image">
                 <div class="image-number">-2-</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κτήριο+10+3" alt="Κτήριο 10 - 3" class="gallery-image">
-                <div class="image-number">-3-</div>
             </div>
         </div>
         
         <div class="image-caption">
-            <p>-1- Αρχιτεκτονική του Κτηρίου 10.</p>
-            <p>-2- Εσωτερικοί χώροι και διαρρύθμιση.</p>
-            <p>-3- Λεπτομέρειες κατασκευής.</p>
+            <p>-1- Το Κτήριο 10 του Κάστρου Καλλιθέας.</p>
+            <p>-2- Λεπτομέρειες από το Κτήριο 10.</p>
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="back-to-collection1-ktirio">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
-            <a href="#" class="back-button" id="to-main-page-from-ktirio">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button back-to-collection1">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -745,37 +1046,30 @@
         </footer>
     </div>
 
-    <!-- Σελίδα Κεραμικά Ευρήματα -->
     <div class="container" id="keramika-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
         <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
         <div class="virtual-tour">Virtual Tour</div>
         
-        <!-- Εικόνες στη σελίδα -->
         <div class="image-gallery">
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κεραμικά+1" alt="Κεραμικά Ευρήματα 1" class="gallery-image">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Κεραμικά+1" alt="Κεραμικά 1" class="gallery-image">
                 <div class="image-number">-1-</div>
             </div>
             <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κεραμικά+2" alt="Κεραμικά Ευρήματα 2" class="gallery-image">
+                <img src="https://via.placeholder.com/400x300/8d6e63/ffffff?text=Κεραμικά+2" alt="Κεραμικά 2" class="gallery-image">
                 <div class="image-number">-2-</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/600x400/8d6e63/ffffff?text=Κεραμικά+3" alt="Κεραμικά Ευρήματα 3" class="gallery-image">
-                <div class="image-number">-3-</div>
             </div>
         </div>
         
         <div class="image-caption">
-            <p>-1- Συλλογή αρχαίων αγγείων.</p>
-            <p>-2- Κεραμικά από διαφορετικές περιόδους.</p>
-            <p>-3- Ειδικά διακοσμημένα αγγεία.</p>
+            <p>-1- Κεραμικά ευρήματα από το Κάστρο Καλλιθέας.</p>
+            <p>-2- Επιπλέον κεραμικά αντικείμενα.</p>
         </div>
         
         <div class="description">
-            <a href="#" class="back-button" id="back-to-collection1-keramika">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
-            <a href="#" class="back-button" id="to-main-page-from-keramika">Κεντρική Σελίδα</a>
+            <a href="#" class="back-button back-to-collection1">Επιστροφή στην σελίδα Συλλογή Είσοδος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
         </div>
         
         <footer>
@@ -831,6 +1125,19 @@
                 }
             ];
 
+            // Συνάρτηση για εμφάνιση σελίδας και scroll στην κορυφή
+            function showPage(page) {
+                // Απόκρυψη όλων των σελίδων
+                const allPages = document.querySelectorAll('.container');
+                allPages.forEach(p => p.style.display = 'none');
+                
+                // Εμφάνιση της επιλεγμένης σελίδας
+                page.style.display = 'block';
+                
+                // Scroll στην κορυφή της σελίδας
+                window.scrollTo(0, 0);
+            }
+
             const mainPage = document.getElementById('main-page');
             const collection1Page = document.getElementById('collection1-page');
             const collection2Page = document.getElementById('collection2-page');
@@ -845,15 +1152,19 @@
             const ktirioPage = document.getElementById('ktirio10-page');
             const keramikaPage = document.getElementById('keramika-page');
             
+            // Νέα - Σελίδες Αρχαιολογικής Ομάδας
+            const team1Page = document.getElementById('archaeological-team1-page');
+            const team2Page = document.getElementById('archaeological-team2-page');
+            const team3Page = document.getElementById('archaeological-team3-page');
+            
             // Προσθέτουμε events για τις συλλογές
             const collectionItems = document.querySelectorAll('.collection-item');
             collectionItems.forEach(item => {
                 item.addEventListener('click', function() {
                     const collection = this.getAttribute('data-collection');
-                    mainPage.style.display = 'none';
                     
                     if (collection === "1") {
-                        collection1Page.style.display = 'block';
+                        showPage(collection1Page);
                         // Δημιουργούμε τα highlights και labels μόνο όταν εμφανιστεί η σελίδα
                         setTimeout(() => {
                             const imageContainer = document.getElementById('image-container');
@@ -861,15 +1172,15 @@
                             createHighlightsAndLabels(imageContainer, img, areas);
                         }, 100);
                     } else if (collection === "2") {
-                        collection2Page.style.display = 'block';
+                        showPage(collection2Page);
                     } else if (collection === "3") {
-                        collection3Page.style.display = 'block';
+                        showPage(collection3Page);
                     } else if (collection === "4") {
-                        collection4Page.style.display = 'block';
+                        showPage(collection4Page);
                     } else if (collection === "5") {
-                        collection5Page.style.display = 'block';
+                        showPage(collection5Page);
                     } else if (collection === "6") {
-                        collection6Page.style.display = 'block';
+                        showPage(collection6Page);
                     }
                 });
             });
@@ -877,79 +1188,36 @@
             // Προσθέτουμε event για το πλαίσιο Αρχαιολογική Ομάδα
             const teamBox = document.querySelector('.team-box');
             teamBox.addEventListener('click', function() {
-                alert('Αρχαιολογική Ομάδα - Σελίδα υπό κατασκευή');
+                showPage(team1Page);
+            });
+            
+            // Προσθέτουμε events για τα κουμπιά στις νέες σελίδες Αρχαιολογικής Ομάδας
+            document.querySelector('.next-to-team2').addEventListener('click', function(e) {
+                e.preventDefault();
+                showPage(team2Page);
+            });
+            
+            document.querySelector('.next-to-team3').addEventListener('click', function(e) {
+                e.preventDefault();
+                showPage(team3Page);
             });
             
             // Προσθέτουμε events για τα κουμπιά επιστροφής στις υποσελίδες
-            document.getElementById('back-to-collection1').addEventListener('click', function(e) {
-                e.preventDefault();
-                mapPage.style.display = 'none';
-                collection1Page.style.display = 'block';
-            });
-            
-            document.getElementById('back-to-collection1-gates').addEventListener('click', function(e) {
-                e.preventDefault();
-                gatesPage.style.display = 'none';
-                collection1Page.style.display = 'block';
-            });
-            
-            document.getElementById('back-to-collection1-agora').addEventListener('click', function(e) {
-                e.preventDefault();
-                agoraPage.style.display = 'none';
-                collection1Page.style.display = 'block';
-            });
-            
-            document.getElementById('back-to-collection1-evrimata').addEventListener('click', function(e) {
-                e.preventDefault();
-                evrimataPage.style.display = 'none';
-                collection1Page.style.display = 'block';
-            });
-            
-            document.getElementById('back-to-collection1-ktirio').addEventListener('click', function(e) {
-                e.preventDefault();
-                ktirioPage.style.display = 'none';
-                collection1Page.style.display = 'block';
-            });
-            
-            document.getElementById('back-to-collection1-keramika').addEventListener('click', function(e) {
-                e.preventDefault();
-                keramikaPage.style.display = 'none';
-                collection1Page.style.display = 'block';
+            const backToCollection1Buttons = document.querySelectorAll('.back-to-collection1');
+            backToCollection1Buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPage(collection1Page);
+                });
             });
             
             // Προσθέτουμε events για τα κουμπιά "Κεντρική Σελίδα" σε όλες τις σελίδες
-            const mainPageButtons = [
-                'to-main-page', 'to-main-page-from-collection2', 
-                'to-main-page-from-collection3', 'to-main-page-from-collection4',
-                'to-main-page-from-collection5', 'to-main-page-from-collection6',
-                'to-main-page-from-map', 'to-main-page-from-gates',
-                'to-main-page-from-agora', 'to-main-page-from-evrimata',
-                'to-main-page-from-ktirio', 'to-main-page-from-keramika'
-            ];
-            
-            mainPageButtons.forEach(buttonId => {
-                const button = document.getElementById(buttonId);
-                if (button) {
-                    button.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        // Απόκρυψη όλων των σελίδων
-                        collection1Page.style.display = 'none';
-                        collection2Page.style.display = 'none';
-                        collection3Page.style.display = 'none';
-                        collection4Page.style.display = 'none';
-                        collection5Page.style.display = 'none';
-                        collection6Page.style.display = 'none';
-                        mapPage.style.display = 'none';
-                        gatesPage.style.display = 'none';
-                        agoraPage.style.display = 'none';
-                        evrimataPage.style.display = 'none';
-                        ktirioPage.style.display = 'none';
-                        keramikaPage.style.display = 'none';
-                        
-                        // Εμφάνιση της κύριας σελίδας
-                        mainPage.style.display = 'block';
-                    });
-                }
+            const mainPageButtons = document.querySelectorAll('.main-page-button');
+            mainPageButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPage(mainPage);
+                });
             });
             
             // Προσθέτουμε events για τις εικόνες στις σελίδες
@@ -998,26 +1266,32 @@
                             // Εμφάνιση της σελίδας του χάρτη
                             document.getElementById('collection1-page').style.display = 'none';
                             document.getElementById('kallithea-map-page').style.display = 'block';
+                            window.scrollTo(0, 0);
                         } else if (area.title === "Μακέτες Εισόδου - Πυλών") {
                             // Εμφάνιση της σελίδας των μακετών
                             document.getElementById('collection1-page').style.display = 'none';
                             document.getElementById('gates-page').style.display = 'block';
+                            window.scrollTo(0, 0);
                         } else if (area.title === "Η Αγορά του Κάστρου") {
                             // Εμφάνιση της σελίδας της αγοράς
                             document.getElementById('collection1-page').style.display = 'none';
                             document.getElementById('agora-page').style.display = 'block';
+                            window.scrollTo(0, 0);
                         } else if (area.title === "Ευρήματα 1") {
                             // Εμφάνιση της σελίδας των ευρημάτων
                             document.getElementById('collection1-page').style.display = 'none';
                             document.getElementById('evrimata1-page').style.display = 'block';
+                            window.scrollTo(0, 0);
                         } else if (area.title === "Το Κτήριο 10") {
                             // Εμφάνιση της σελίδας του κτηρίου
                             document.getElementById('collection1-page').style.display = 'none';
                             document.getElementById('ktirio10-page').style.display = 'block';
+                            window.scrollTo(0, 0);
                         } else if (area.title === "Κεραμικά Ευρήματα") {
                             // Εμφάνιση της σελίδας των κεραμικών
                             document.getElementById('collection1-page').style.display = 'none';
                             document.getElementById('keramika-page').style.display = 'block';
+                            window.scrollTo(0, 0);
                         }
                     });
                     
