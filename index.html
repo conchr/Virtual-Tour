@@ -70,6 +70,12 @@
                 width: 90% !important;
                 text-align: center;
             }
+
+            .farsala-center-button {
+                width: 90% !important;
+                margin: 10px auto !important;
+                text-align: center;
+            }
         }
         
         @media (max-width: 480px) {
@@ -104,6 +110,11 @@
             
             .video-content {
                 padding: 15px 10px !important;
+            }
+
+            .farsala-center-button {
+                font-size: 1.1em !important;
+                padding: 12px 20px !important;
             }
         }
 
@@ -403,6 +414,29 @@
         .back-button:hover {
             background-color: #6d4c41;
         }
+
+        /* Στυλ για το νέο κουμπί Farsala Center Page */
+        .farsala-center-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #d32f2f, #b71c1c);
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.3em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .farsala-center-button:hover {
+            background: linear-gradient(135deg, #b71c1c, #8b0000);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
         
         /* Στυλ για τα highlights */
         .highlight-area {
@@ -632,11 +666,11 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
+            <a href="https://conchr.github.io/Farsala-Center-Page" class="farsala-center-button">Farsala Center Page</a>
         </footer>
     </div>
 
-    <!-- Οι υπόλοιπες σελίδες παραμένουν όπως στο προηγούμενο αρχείο -->
+    <!-- Οι υπόλοιπες σελίδες παραμένουν αμετάβλητες -->
     <!-- Σελίδα Συλλογή Είσοδος -->
     <div class="container" id="collection1-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
