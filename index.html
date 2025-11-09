@@ -8,24 +8,37 @@
         /* Βελτιωμένα στυλ για responsiveness */
         @media (max-width: 768px) {
             .main-title {
-                font-size: 1.6em !important;
+                font-size: 1.4em !important;
+                line-height: 1.3 !important;
             }
             
             .page-title {
-                font-size: 2em !important;
+                font-size: 1.8em !important;
+                line-height: 1.2 !important;
+                margin-bottom: 5px !important;
             }
             
             .subtitle {
-                font-size: 1.2em !important;
+                font-size: 1.1em !important;
+                line-height: 1.2 !important;
+                margin-bottom: 10px !important;
             }
             
             .virtual-tour {
-                font-size: 1.4em !important;
+                font-size: 1.2em !important;
+                margin-bottom: 20px !important;
             }
             
             .welcome-text {
-                font-size: 1em !important;
+                font-size: 0.95em !important;
                 padding: 15px !important;
+                line-height: 1.5 !important;
+                margin-bottom: 20px !important;
+            }
+            
+            .video-content {
+                padding: 20px 15px !important;
+                justify-content: flex-start !important;
             }
             
             .collections-grid {
@@ -38,8 +51,8 @@
             }
             
             .video-section {
-                height: 50vh !important;
-                min-height: 300px !important;
+                height: auto !important;
+                min-height: 100vh !important;
             }
             
             .gallery-item {
@@ -61,11 +74,24 @@
         
         @media (max-width: 480px) {
             .main-title {
-                font-size: 1.3em !important;
+                font-size: 1.2em !important;
             }
             
             .page-title {
-                font-size: 1.6em !important;
+                font-size: 1.5em !important;
+            }
+            
+            .subtitle {
+                font-size: 1em !important;
+            }
+            
+            .virtual-tour {
+                font-size: 1.1em !important;
+            }
+            
+            .welcome-text {
+                font-size: 0.9em !important;
+                padding: 12px !important;
             }
             
             .collections-grid {
@@ -77,7 +103,7 @@
             }
             
             .video-content {
-                padding: 20px 15px !important;
+                padding: 15px 10px !important;
             }
         }
 
@@ -92,6 +118,53 @@
             
             .main-title {
                 font-size: 1.4em !important;
+            }
+            
+            .page-title {
+                font-size: 1.8em !important;
+            }
+            
+            .subtitle {
+                font-size: 1.1em !important;
+            }
+            
+            .virtual-tour {
+                font-size: 1.3em !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .welcome-text {
+                font-size: 0.9em !important;
+                padding: 10px !important;
+                margin-bottom: 15px !important;
+            }
+        }
+
+        @media (max-height: 600px) {
+            .video-content {
+                padding-top: 20px !important;
+                padding-bottom: 20px !important;
+            }
+            
+            .page-title {
+                font-size: 1.8em !important;
+                margin-bottom: 5px !important;
+            }
+            
+            .subtitle {
+                font-size: 1.1em !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .virtual-tour {
+                font-size: 1.2em !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .welcome-text {
+                font-size: 0.9em !important;
+                padding: 12px !important;
+                margin-bottom: 15px !important;
             }
         }
 
@@ -126,6 +199,7 @@
             margin: 0;
             font-size: 2.2em;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
         
         .container {
@@ -140,37 +214,40 @@
         .page-title {
             text-align: center;
             color: #ffffff;
-            margin-bottom: 5px;
-            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-size: 2.5em;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            line-height: 1.1;
         }
         
         .subtitle {
             text-align: center;
             color: #f0f0f0;
             margin-top: 0;
-            font-size: 1.6em;
+            margin-bottom: 20px;
+            font-size: 1.4em;
             display: block;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+            line-height: 1.2;
         }
         
         .virtual-tour {
             text-align: center;
-            font-size: 1.8em;
-            margin-bottom: 30px;
+            font-size: 1.6em;
+            margin-bottom: 25px;
             color: #e8e8e8;
             font-weight: bold;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .welcome-text {
-            font-size: 1.2em;
-            line-height: 1.7;
-            margin-bottom: 40px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
             text-align: justify;
             color: #ffffff;
             background-color: rgba(90, 70, 50, 0.7);
-            padding: 20px;
+            padding: 18px;
             border-radius: 10px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
@@ -178,8 +255,8 @@
         .video-section {
             position: relative;
             width: 100%;
-            height: 70vh;
-            min-height: 500px;
+            height: 80vh;
+            min-height: 600px;
             overflow: hidden;
         }
         
@@ -206,7 +283,7 @@
         .video-content {
             position: relative;
             z-index: 3;
-            padding: 40px 30px;
+            padding: 50px 30px;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -545,6 +622,7 @@
         </footer>
     </div>
 
+    <!-- Οι υπόλοιπες σελίδες παραμένουν όπως στο προηγούμενο αρχείο -->
     <!-- Σελίδα Συλλογή Είσοδος -->
     <div class="container" id="collection1-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
