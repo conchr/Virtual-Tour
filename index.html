@@ -437,6 +437,31 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
+
+        /* Προσθήκη στυλ για τα νέα κουμπιά επιστροφής */
+        .back-to-collection2,
+        .back-to-collection3, 
+        .back-to-collection4,
+        .back-to-collection5,
+        .back-to-collection6 {
+            display: inline-block;
+            background-color: #8d6e63;
+            color: #f5e9d7;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-collection2:hover,
+        .back-to-collection3:hover,
+        .back-to-collection4:hover, 
+        .back-to-collection5:hover,
+        .back-to-collection6:hover {
+            background-color: #6d4c41;
+        }
         
         /* Στυλ για τα highlights */
         .highlight-area {
@@ -478,7 +503,17 @@
         #evrimata1-page, #ktirio10-page, #keramika-page,
         #collection2-page, #collection3-page, #collection4-page, 
         #collection5-page, #collection6-page,
-        #archaeological-team1-page, #archaeological-team2-page, #archaeological-team3-page {
+        #archaeological-team1-page, #archaeological-team2-page, #archaeological-team3-page,
+        /* Νέες σελίδες για Συλλογή 2 */
+        #portable-hearth-page, #building10-finds-page, #building10-bathtub-page,
+        /* Νέες σελίδες για Συλλογή 3 */
+        #collection3-title1-page, #collection3-title2-page, #collection3-title3-page,
+        /* Νέες σελίδες για Συλλογή 4 */
+        #loom-page, #loom-weights-page, #farm-tools-page, #hive-millstone-page,
+        /* Νέες σελίδες για Συλλογή 5 */
+        #artistic-finds-page, #compass-page, #collection5-title3-page,
+        /* Νέες σελίδες για Συλλογή 6 */
+        #coins-page, #weapons-page {
             display: none;
         }
         
@@ -670,7 +705,6 @@
         </footer>
     </div>
 
-    <!-- Οι υπόλοιπες σελίδες παραμένουν αμετάβλητες -->
     <!-- Σελίδα Συλλογή Είσοδος -->
     <div class="container" id="collection1-page">
         <h2 class="page-title">Κάστρο Καλλιθέας</h2>
@@ -680,7 +714,6 @@
         <div class="scroll-container">
             <div class="image-container" id="image-container">
                 <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/PXL_20251106_083141857.PANO.jpg" alt="Κάστρο Καλλιθέας" id="main-image">
-                <!-- Τα highlights και labels θα προστεθούν δυναμικά με JavaScript -->
             </div>
         </div>
         <div class="scroll-hint">Χρησιμοποιήστε το scroll για να δείτε ολόκληρη την εικόνα</div>
@@ -694,7 +727,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -706,7 +738,7 @@
         
         <div class="scroll-container">
             <div class="image-container" id="image-container-2">
-                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/PXL_20251106_083230049.PANO.jpg" alt="Κάστρο Καλλιθέας - Συλλογή 2ο Μέρος" id="main-image-2">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/PXL_20251106_083230049.PANO.jpg" alt="Κάστρο Καλλιθέας - Συлλογή 2ο Μέρος" id="main-image-2">
             </div>
         </div>
         <div class="scroll-hint">Χρησιμοποιήστε το scroll για να δείτε ολόκληρη την εικόνα</div>
@@ -720,7 +752,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -745,7 +776,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -770,7 +800,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -795,7 +824,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -820,7 +848,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -852,7 +879,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -888,11 +914,8 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
-
-    <!-- Υπόλοιπες υπάρχουσες σελίδες παραμένουν -->
 
     <!-- Νέες Σελίδες Αρχαιολογικής Ομάδας -->
 
@@ -963,7 +986,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -1012,7 +1034,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -1059,11 +1080,10 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
-    <!-- Νέες σελίδες για τα υπόλοιπα αντικείμενα της Συλλογής Είσοδος -->
+    <!-- Νέες σελίδες για τα υπόλοιπα αντικείμενα της Συλλογή Είσοδος -->
 
     <!-- Σελίδα Αγορά -->
     <div class="container" id="agora-page">
@@ -1096,7 +1116,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -1138,7 +1157,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -1189,7 +1207,6 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
     </div>
 
@@ -1240,8 +1257,531 @@
         </div>
         
         <footer>
-            <!-- Το κείμενο αφαιρέθηκε -->
         </footer>
+    </div>
+
+    <!-- Νέες σελίδες για Συλλογή 2ο Μέρος -->
+
+    <!-- Σελίδα Φορητή Εστία -->
+    <div class="container" id="portable-hearth-page">
+        <h2 class="page-title">Φορητή Εστία</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/7foritiEstia.jpg" alt="Φορητή Εστία - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/7Hitra.jpg" alt="Φορητή Εστία - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <p><strong>-1-</strong> Η εύρεση μιας φορητής εστίας (ή πυροστιάς) στις ανασκαφές του Κάστρου Καλλιθέας, ιδιαίτερα αν προέρχεται από ιδιωτική οικία (όπως το Κτήριο 10), έχει σημαντικό νόημα για την κατανόηση της καθημερινής ζωής και των τελετουργικών πρακτικών των κατοίκων της Ελληνιστικής εποχής.</p>
+            
+            <p><strong>🔥 Λειτουργική Σημασία</strong><br>
+            Η φορητή εστία υποδηλώνει τον τρόπο με τον οποίο οι κάτοικοι διαχειρίζονταν τη θερμότητα και το μαγείρεμα εντός του σπιτιού:</p>
+            
+            <p><strong>Ευελιξία Μαγειρέματος:</strong> Σε αντίθεση με τις σταθερές εστίες (τζάκια), η φορητή εστία επέτρεπε το μαγείρεμα και τη θέρμανση σε διάφορα σημεία του σπιτιού (π.χ., στην αυλή, στο μαγειρείο ή ακόμη και στον χώρο του συμποσίου), ανάλογα με τις ανάγκες και την εποχή.</p>
+            
+            <p><strong>Θέρμανση:</strong> Μπορούσε να χρησιμοποιηθεί για την θέρμανση μικρών δωματίων ή συγκεκριμένων χώρων κατά τους χειμερινούς μήνες.</p>
+            
+            <p><strong>Πολυχρηστικότητα:</strong> Συνήθως, πάνω στη φορητή εστία τοποθετούνταν σκεύη για μαγείρεμα (κατσαρόλες, χύτρες) ή ψήσιμο (σχάρες).</p>
+            
+            <p><strong>-2-</strong> Οι χύτρες χρησιμοποιούνταν για την παρασκευή υδαρών φαγητών, όπως σούπες, όσπρια (φακές, ρεβίθια), βραστά κρέατα ή χορταρικά.</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection2">Επιστροφή στην Συλλογή 2ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Ευρήματα Κτήριο 10 -->
+    <div class="container" id="building10-finds-page">
+        <h2 class="page-title">Ευρήματα Κτήριο 10</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8Pinakio.jpg" alt="Πινάκιο" class="gallery-image">
+                <div class="image-number">-1- Πινάκιο</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8askos.jpg" alt="Ασκός" class="gallery-image">
+                <div class="image-number">-2- Ασκός</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8bowl.jpg" alt="Φιάλη" class="gallery-image">
+                <div class="image-number">-3- Φιάλη</div>
+            </div>
+        </div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8oinohoos.jpg" alt="Οινοχόος" class="gallery-image">
+                <div class="image-number">-4- Οινοχόος</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8potiria-kantharoi.jpg" alt="Κάνθαροι" class="gallery-image">
+                <div class="image-number">-5- Κάνθαροι</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8miridoheia.jpg" alt="Μυροδοχεία" class="gallery-image">
+                <div class="image-number">-6- Μυροδοχεία</div>
+            </div>
+        </div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8kosmimata.jpg" alt="Κοσμήματα" class="gallery-image">
+                <div class="image-number">-7- Κοσμήματα</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8photo1.jpg" alt="Από την Ανασκαφή" class="gallery-image">
+                <div class="image-number">-8- Από την Ανασκαφή</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8photo2.jpg" alt="Από την Ανασκαφή" class="gallery-image">
+                <div class="image-number">-9- Από την Ανασκαφή</div>
+            </div>
+        </div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/8photo3.jpg" alt="Από την Ανασκαφή" class="gallery-image">
+                <div class="image-number">-10- Από την Ανασκαφή</div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <p>Τα ευρήματα αυτά υποδηλώνουν πολυτελή καθημερινή ζωή και τη συμμετοχή της οικογένειας στον πολιτιστικό κανόνα της ελληνιστικής εποχής, ο οποίος έδινε μεγάλη έμφαση στην εμφάνιση και την ευζωία.</p>
+            
+            <p>Ο συνδυασμός πολυτελών σκευών (για συμπόσια) και κοσμημάτων/αρωμάτων (για προσωπική φροντίδα) καθιστά το Κτήριο 10 την πλέον σαφή απόδειξη της επιφανούς αριστοκρατικής οικογένειας που κατοικούσε στην αρχαία πόλη Πεύμα.</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection2">Επιστροφή στην Συλλογή 2ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Μπανιέρα Κτήριο 10 - Τροποποιημένη -->
+    <div class="container" id="building10-bathtub-page">
+        <h2 class="page-title">Μπανιέρα Κτήριο 10</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/10Mpaniera.jpg" alt="Μπανιέρα Κτήριο 10 - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/10mpanieraMap.jpg" alt="Μπανιέρα Κτήριο 10 - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <p><strong>Ατομικό Λουτρό:</strong> Χρησιμοποιούνταν για το ατομικό λουτρό των μελών της οικογένειας. Οι αρχαίες μπανιέρες δεν ήταν σταθερές όπως οι σημερινές, αλλά συχνά ήταν πήλινες ή πέτρινες λεκάνες (λουτήρες), στις οποίες ο λουόμενος καθόταν ή έβρεχε το σώμα του.</p>
+            
+            <p><strong>Θέρμανση Νερού:</strong> Το νερό θερμαινόταν σε ξεχωριστά σκεύη (λέβητες) και μεταφερόταν στη μπανιέρα. Η διαδικασία αυτή ήταν χρονοβόρα και απαιτούσε εργατικό προσωπικό (συνήθως δούλους), γεγονός που ενισχύει την εικόνα της ευμάρειας.</p>
+            
+            <p><strong>Απουσία Δημόσιου Λουτρού:</strong> Η ύπαρξη ιδιωτικού λουτρού ήταν ιδιαίτερα σημαντική, καθώς υποδηλώνει ότι οι ένοικοι δεν εξαρτώνταν από τα δημόσια λουτρά (εάν υπήρχαν στην πόλη) για τις καθημερινές τους ανάγκες.</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection2">Επιστροφή στην Συλλογή 2ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Νέες σελίδες για Συλλογή 3ο Μέρος -->
+
+    <!-- Σελίδα Βάση Λουτήρα (πρώην Τίτλος1 Συλλογή 3) -->
+    <div class="container" id="collection3-title1-page">
+        <h2 class="page-title">Βάση Λουτήρα</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/9BasiLousimo.jpg" alt="Βάση Λουτήρα" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <p>Οι αρχαίες μπανιέρες δεν ήταν σταθερές όπως οι σημερινές, αλλά συχνά ήταν πήλινες ή πέτρινες λεκάνες (λουτήρες), στις οποίες ο λουόμενος καθόταν ή έβρεχε το σώμα του.</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection3">Επιστροφή στην Συλλογή 3ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Χύτρα (πρώην Τίτλος2 Συλλογή 3) -->
+    <div class="container" id="collection3-title2-page">
+        <h2 class="page-title">Χύτρα</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/11Hytra.jpg" alt="Χύτρα" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <p>Χρησιμοποιούνταν για την παρασκευή μαγειρευτών και υδαρών φαγητών, όπως σούπες, όσπρια (φακές, ρεβίθια), βραστά κρέατα.</p>
+            <p>Ήταν κατασκευασμένη από χονδροειδή κεραμική με συγκεκριμένη επεξεργασία για να αντέχει στην άμεση επαφή με τη φωτιά (π.χ., πάνω στη φορητή εστία). Η παρουσία της επιβεβαιώνει τη χρήση της κουζίνας.</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection3">Επιστροφή στην Συλλογή 3ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Ευρήματα 2 (πρώην Τίτλος3 Συλλογή 3) -->
+    <div class="container" id="collection3-title3-page">
+        <h2 class="page-title">Ευρήματα 2</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/12Skyfos-Ofeltis.jpg" alt="Σκύφος - Μύθος Οφέλτη" class="gallery-image">
+                <div class="image-number">-1-</div>
+                <div class="image-caption">
+                    <p>-1- Σκύφος - Μύθος Οφέλτη</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/12Skyfoi-MakriaPetala.jpg" alt="Σκύφοι" class="gallery-image">
+                <div class="image-number">-2-</div>
+                <div class="image-caption">
+                    <p>-2- Σκύφοι</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/12metalioSkyfou-MenemahosEfessos.jpg" alt="Μετάλιο Σκύφου - Μενέμαχος" class="gallery-image">
+                <div class="image-number">-3-</div>
+                <div class="image-caption">
+                    <p>-3- Μετάλιο Σκύφου - Μενέμαχος</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/12GialynosSkyfos.jpg" alt="Γιάλυνος Σκύφος" class="gallery-image">
+                <div class="image-number">-4-</div>
+                <div class="image-caption">
+                    <p>-4- Γιάλυνος Σκύφος</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/12Kalathos.jpg" alt="Κάλαθος" class="gallery-image">
+                <div class="image-number">-5-</div>
+                <div class="image-caption">
+                    <p>-5- Κάλαθος</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://raw.githubusercontent.com/conchr/Virtual-Tour/main/12AmforeasSisifos%20Aftolikos.jpg" alt="Αμφορέας - Μύθος Σίσυφος Αυτόλυκος" class="gallery-image">
+                <div class="image-number">-10-</div>
+                <div class="image-caption">
+                    <p>-10- Αμφορέας - Μύθος Σίσυφος Αυτόλυκος</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <p>Ο σκύφος είναι ένα κοινό είδος αρχαίου ελληνικού αγγείου, ένα ποτήρι πόσης με δύο λαβές, που ήταν ιδιαίτερα δημοφιλές στα συμπόσια.</p>
+        </div>
+        
+        <div class="info-box">
+            <p><strong>Ο μύθος του Οφέλτη.</strong><br>
+            Ο μύθος είναι στενά συνδεδεμένος με τον θάνατο, την μοίρα και την ίδρυση αγώνων (αθλητικές τελετές). Η χρήση ενός τέτοιου αγγείου σε συμπόσια μπορεί να υποδηλώνει τελετουργικό ή αναμνηστικό χαρακτήρα, ίσως σχετιζόμενο με παιχνίδι ή αγώνες που τελούνταν τοπικά.</p>
+        </div>
+        
+        <div class="info-box">
+            <p><strong>Ο μύθος του Αυτόλυκου.</strong><br>
+            <strong>Ο Αυτόλυκος:</strong> Είχε λάβει από τον πατέρα του το χάρισμα να αλλάζει τη μορφή και το χρώμα των ζώων που έκλεβε, καθιστώντας αδύνατη την αναγνώρισή τους.</p>
+            
+            <p><strong>Ο Σίσυφος:</strong> Ήταν ο μόνος που κατάφερε να τον ξεγελάσει. Όταν ο Αυτόλυκος έκλεψε τα βόδια του Σίσυφου, ο Σίσυφος είχε προνοήσει και είχε χαράξει το μονόγραμμά του κάτω από τις οπλές των ζώων. Με αυτόν τον τρόπο, αναγνώρισε τα κλεμμένα ζώα του, αποκαλύπτοντας την πονηριά του Αυτόλυκου.</p>
+            
+            <p><strong>Σύνδεση με τον Οδυσσέα:</strong> Μετά την ήττα του, ο Αυτόλυκος φιλοξένησε τον Σίσυφο. Κατά τη διάρκεια της φιλοξενίας, ο Σίσυφος πλάγιασε με την Αντίκλεια, την κόρη του Αυτόλυκου, η οποία επρόκειτο να παντρευτεί τον Λαέρτη. Από αυτήν την ένωση γεννήθηκε, σύμφωνα με ορισμένες παραδόσεις, ο Οδυσσέας, κληρονομώντας την εξυπνάδα και των δύο παππούδων του.</p>
+        </div>
+        
+        <div class="info-box">
+            <p><strong>Μενέμαχος από την Εφεσσο.</strong><br>
+            <strong>Μετάλλιο:</strong> Στην περίπτωση αυτή, ο όρος "μετάλλιο" αναφέρεται στον ανάγλυφο δίσκο που κοσμεί το κέντρο του εσωτερικού πυθμένα του αγγείου (μια συχνή διακόσμηση σε κεραμικά της Ελληνιστικής εποχής).</p>
+            
+            <p><strong>Προέλευση:</strong> Το γεγονός ότι ο σκύφος φέρει την ένδειξη "από τον Μενέμαχο στην Έφεσο" σημαίνει ότι πρόκειται για εισαγόμενο αγγείο, και μάλιστα ένα ελληνιστικό κεραμικό με ανάγλυφη διακόσμηση (relief ware) που παρήχθη σε εργαστήριο της Εφέσου (Μικρά Ασία).</p>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection3">Επιστροφή στην Συλλογή 3ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Νέες σελίδες για Συλλογή 4ο Μέρος -->
+
+    <!-- Σελίδα Αργαλειός -->
+    <div class="container" id="loom-page">
+        <h2 class="page-title">Αργαλειός</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+1" alt="Αργαλειός - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+2" alt="Αργαλειός - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+3" alt="Αργαλειός - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection4">Επιστροφή στην Συλλογή 4ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Βαρίδια Αργαλειού -->
+    <div class="container" id="loom-weights-page">
+        <h2 class="page-title">Βαρίδια Αργαλειού</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+1" alt="Βαρίδια Αργαλειού - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+2" alt="Βαρίδια Αργαλειού - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+3" alt="Βαρίδια Αργαλειού - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection4">Επιστροφή στην Συλλογή 4ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Αγροτικά Εργαλεία -->
+    <div class="container" id="farm-tools-page">
+        <h2 class="page-title">Αγροτικά Εργαλεία</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+1" alt="Αγροτικά Εργαλεία - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+2" alt="Αγροτικά Εργαλεία - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+3" alt="Αγροτικά Εργαλεία - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection4">Επιστροφή στην Συλλογή 4ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Κυψέλη, Μυλόπετρα -->
+    <div class="container" id="hive-millstone-page">
+        <h2 class="page-title">Κυψέλη, Μυλόπετρα</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+1" alt="Κυψέλη, Μυλόπετρα - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+2" alt="Κυψέλη, Μυλόπετρα - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+3" alt="Κυψέλη, Μυλόπετρα - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection4">Επιστροφή στην Συλλογή 4ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Νέες σελίδες για Συλλογή 5ο Μέρος -->
+
+    <!-- Σελίδα Καλλιτεχνικά Ευρήματα -->
+    <div class="container" id="artistic-finds-page">
+        <h2 class="page-title">Καλλιτεχνικά Ευρήματα</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+1" alt="Καλλιτεχνικά Ευρήματα - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+2" alt="Καλλιτεχνικά Ευρήματα - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+3" alt="Καλλιτεχνικά Ευρήματα - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection5">Επιστροφή στην Συλλογή 5ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Πυξίδα -->
+    <div class="container" id="compass-page">
+        <h2 class="page-title">Πυξίδα</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+1" alt="Πυξίδα - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+2" alt="Πυξίδα - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+3" alt="Πυξίδα - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection5">Επιστροφή στην Συλλογή 5ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Τίτλος3 Συλλογή 5 -->
+    <div class="container" id="collection5-title3-page">
+        <h2 class="page-title">Τίτλος3 Συλλογή 5</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+1" alt="Τίτλος3 Συλλογή 5 - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+2" alt="Τίτλος3 Συλλογή 5 - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+3" alt="Τίτλος3 Συλλογή 5 - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection5">Επιστροφή στην Συλλογή 5ο Μέρος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Νέες σελίδες για Συλλογή Εξοδος -->
+
+    <!-- Σελίδα Νομίσματα -->
+    <div class="container" id="coins-page">
+        <h2 class="page-title">Νομίσματα</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+1" alt="Νομίσματα - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+2" alt="Νομίσματα - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+3" alt="Νομίσματα - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection6">Επιστροφή στην Συλλογή Εξοδος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
+    </div>
+
+    <!-- Σελίδα Οπλα -->
+    <div class="container" id="weapons-page">
+        <h2 class="page-title">Οπλα</h2>
+        <span class="subtitle">(Ματιές σε μια Αρχαία Πόλη)</span>
+        <div class="virtual-tour">Virtual Tour</div>
+        
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+1" alt="Οπλα - 1" class="gallery-image">
+                <div class="image-number">-1-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+2" alt="Οπλα - 2" class="gallery-image">
+                <div class="image-number">-2-</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300x200/8d6e63/ffffff?text=Εικόνα+3" alt="Οπλα - 3" class="gallery-image">
+                <div class="image-number">-3-</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            <a href="#" class="back-button back-to-collection6">Επιστροφή στην Συλλογή Εξοδος</a>
+            <a href="#" class="back-button main-page-button">Κεντρική Σελίδα</a>
+        </div>
     </div>
 
     <script>
@@ -1252,43 +1792,153 @@
                 video.playbackRate = 0.7; // 70% της κανονικής ταχύτητας
             }
 
-            // Στοιχεία για τα highlights - με τις ακριβείς συντεταγμένες που μου δώσατε
-            const areas = [
+            // Στοιχεία για τα highlights - Συλλογή Είσοδος
+            const areas1 = [
                 {
                     title: "Χάρτης Καλλιθέας",
                     coords: [419,514,663,818],
                     shape: "rect",
-                    href: "#"
+                    pageId: "kallithea-map-page"
                 },
                 {
                     title: "Μακέτες Εισόδου - Πυλών",
                     coords: [900,542,1218,846],
-                    shape: "rect",
-                    href: "#"
+                    shape: "rect", 
+                    pageId: "gates-page"
                 },
                 {
                     title: "Η Αγορά του Κάστρου",
                     coords: [1430,560,1730,797],
                     shape: "rect",
-                    href: "#"
+                    pageId: "agora-page"
                 },
                 {
                     title: "Ευρήματα 1",
                     coords: [1850,624,2038,836],
                     shape: "rect",
-                    href: "#"
+                    pageId: "evrimata1-page"
                 },
                 {
                     title: "Το Κτήριο 10",
                     coords: [2653,624,2985,967],
                     shape: "rect",
-                    href: "#"
+                    pageId: "ktirio10-page"
                 },
                 {
                     title: "Κεραμικά Ευρήματα",
                     coords: [3370,613,3603,864],
                     shape: "rect",
-                    href: "#"
+                    pageId: "keramika-page"
+                }
+            ];
+
+            // Στοιχεία για τα highlights - Συλλογή 2ο Μέρος
+            const areas2 = [
+                {
+                    title: "Φορητή Εστία",
+                    coords: [94,561,511,865],
+                    shape: "rect",
+                    pageId: "portable-hearth-page"
+                },
+                {
+                    title: "Ευρήματα Κτήριο 10",
+                    coords: [660,412,1645,865],
+                    shape: "rect",
+                    pageId: "building10-finds-page"
+                },
+                {
+                    title: "Μπανιέρα Κτήριο 10",
+                    coords: [3289,649,3762,1211],
+                    shape: "rect",
+                    pageId: "building10-bathtub-page"
+                }
+            ];
+
+            // Στοιχεία για τα highlights - Συλλογή 3ο Μέρος (Τροποποιημένα)
+            const areas3 = [
+                {
+                    title: "Βάση Λουτήρα",
+                    coords: [84,515,369,851],
+                    shape: "rect",
+                    pageId: "collection3-title1-page"
+                },
+                {
+                    title: "Χύτρα", 
+                    coords: [1038,340,1275,505],
+                    shape: "rect",
+                    pageId: "collection3-title2-page"
+                },
+                {
+                    title: "Ευρήματα 2",
+                    coords: [1418,188,1856,411],
+                    shape: "rect",
+                    pageId: "collection3-title3-page"
+                }
+            ];
+
+            // Στοιχεία για τα highlights - Συλλογή 4ο Μέρος
+            const areas4 = [
+                {
+                    title: "Αργαλειός",
+                    coords: [129,80,698,1012],
+                    shape: "rect",
+                    pageId: "loom-page"
+                },
+                {
+                    title: "Βαρίδια Αργαλειού",
+                    coords: [1034,500,1705,790],
+                    shape: "rect",
+                    pageId: "loom-weights-page"
+                },
+                {
+                    title: "Αγροτικά Εργαλεία",
+                    coords: [2045,493,2610,896],
+                    shape: "rect",
+                    pageId: "farm-tools-page"
+                },
+                {
+                    title: "Κυψέλη, Μυλόπετρα",
+                    coords: [2716,793,3250,1093],
+                    shape: "rect",
+                    pageId: "hive-millstone-page"
+                }
+            ];
+
+            // Στοιχεία για τα highlights - Συλλογή 5ο Μέρος
+            const areas5 = [
+                {
+                    title: "Καλλιτεχνικά Ευρήματα",
+                    coords: [63,310,586,701],
+                    shape: "rect",
+                    pageId: "artistic-finds-page"
+                },
+                {
+                    title: "Πυξίδα",
+                    coords: [1639,404,1835,547],
+                    shape: "rect",
+                    pageId: "compass-page"
+                },
+                {
+                    title: "Τίτλος3 Συλλογή 5",
+                    coords: [726,804,1178,906],
+                    shape: "rect",
+                    pageId: "collection5-title3-page"
+                }
+            ];
+
+            // Στοιχεία για τα highlights - Συλλογή Εξοδος
+            const areas6 = [
+                {
+                    title: "Νομίσματα",
+                    coords: [124,401,576,624],
+                    shape: "rect",
+                    pageId: "coins-page"
+                },
+                {
+                    title: "Οπλα",
+                    coords: [1018,377,1677,522],
+                    shape: "rect",
+                    pageId: "weapons-page"
                 }
             ];
 
@@ -1312,17 +1962,6 @@
             const collection4Page = document.getElementById('collection4-page');
             const collection5Page = document.getElementById('collection5-page');
             const collection6Page = document.getElementById('collection6-page');
-            const mapPage = document.getElementById('kallithea-map-page');
-            const gatesPage = document.getElementById('gates-page');
-            const agoraPage = document.getElementById('agora-page');
-            const evrimataPage = document.getElementById('evrimata1-page');
-            const ktirioPage = document.getElementById('ktirio10-page');
-            const keramikaPage = document.getElementById('keramika-page');
-            
-            // Νέα - Σελίδες Αρχαιολογικής Ομάδας
-            const team1Page = document.getElementById('archaeological-team1-page');
-            const team2Page = document.getElementById('archaeological-team2-page');
-            const team3Page = document.getElementById('archaeological-team3-page');
             
             // Προσθέτουμε events για τις συλλογές
             const collectionItems = document.querySelectorAll('.collection-item');
@@ -1336,37 +1975,62 @@
                         setTimeout(() => {
                             const imageContainer = document.getElementById('image-container');
                             const img = document.getElementById('main-image');
-                            createHighlightsAndLabels(imageContainer, img, areas);
+                            createHighlightsAndLabels(imageContainer, img, areas1, "collection1");
                         }, 100);
                     } else if (collection === "2") {
                         showPage(collection2Page);
+                        setTimeout(() => {
+                            const imageContainer = document.getElementById('image-container-2');
+                            const img = document.getElementById('main-image-2');
+                            createHighlightsAndLabels(imageContainer, img, areas2, "collection2");
+                        }, 100);
                     } else if (collection === "3") {
                         showPage(collection3Page);
+                        setTimeout(() => {
+                            const imageContainer = document.getElementById('image-container-3');
+                            const img = document.getElementById('main-image-3');
+                            createHighlightsAndLabels(imageContainer, img, areas3, "collection3");
+                        }, 100);
                     } else if (collection === "4") {
                         showPage(collection4Page);
+                        setTimeout(() => {
+                            const imageContainer = document.getElementById('image-container-4');
+                            const img = document.getElementById('main-image-4');
+                            createHighlightsAndLabels(imageContainer, img, areas4, "collection4");
+                        }, 100);
                     } else if (collection === "5") {
                         showPage(collection5Page);
+                        setTimeout(() => {
+                            const imageContainer = document.getElementById('image-container-5');
+                            const img = document.getElementById('main-image-5');
+                            createHighlightsAndLabels(imageContainer, img, areas5, "collection5");
+                        }, 100);
                     } else if (collection === "6") {
                         showPage(collection6Page);
+                        setTimeout(() => {
+                            const imageContainer = document.getElementById('image-container-6');
+                            const img = document.getElementById('main-image-6');
+                            createHighlightsAndLabels(imageContainer, img, areas6, "collection6");
+                        }, 100);
                     }
                 });
             });
-            
+
             // Προσθέτουμε event για το πλαίσιο Αρχαιολογική Ομάδα
             const teamBox = document.querySelector('.team-box');
             teamBox.addEventListener('click', function() {
-                showPage(team1Page);
+                showPage(document.getElementById('archaeological-team1-page'));
             });
             
             // Προσθέτουμε events για τα κουμπιά στις νέες σελίδες Αρχαιολογικής Ομάδας
             document.querySelector('.next-to-team2').addEventListener('click', function(e) {
                 e.preventDefault();
-                showPage(team2Page);
+                showPage(document.getElementById('archaeological-team2-page'));
             });
             
             document.querySelector('.next-to-team3').addEventListener('click', function(e) {
                 e.preventDefault();
-                showPage(team3Page);
+                showPage(document.getElementById('archaeological-team3-page'));
             });
             
             // Προσθέτουμε events για τα κουμπιά επιστροφής στις υποσελίδες
@@ -1375,6 +2039,47 @@
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
                     showPage(collection1Page);
+                });
+            });
+
+            // Προσθέτουμε events για τα κουμπιά επιστροφής στις άλλες συλλογές
+            const backToCollection2Buttons = document.querySelectorAll('.back-to-collection2');
+            backToCollection2Buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPage(collection2Page);
+                });
+            });
+
+            const backToCollection3Buttons = document.querySelectorAll('.back-to-collection3');
+            backToCollection3Buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPage(collection3Page);
+                });
+            });
+
+            const backToCollection4Buttons = document.querySelectorAll('.back-to-collection4');
+            backToCollection4Buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPage(collection4Page);
+                });
+            });
+
+            const backToCollection5Buttons = document.querySelectorAll('.back-to-collection5');
+            backToCollection5Buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPage(collection5Page);
+                });
+            });
+
+            const backToCollection6Buttons = document.querySelectorAll('.back-to-collection6');
+            backToCollection6Buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPage(collection6Page);
                 });
             });
             
@@ -1396,8 +2101,14 @@
             });
         });
 
-        // Συνάρτηση για δημιουργία highlights και labels (μόνο για τη Συλλογή Είσοδος)
-        function createHighlightsAndLabels(container, image, areas) {
+        // Βελτιωμένη συνάρτηση για δημιουργία highlights και labels
+        function createHighlightsAndLabels(container, image, areas, collectionId) {
+            // Καθαρίζουμε οποιαδήποτε υπάρχοντα highlights
+            const existingOverlay = container.querySelector('.highlight-overlay');
+            if (existingOverlay) {
+                existingOverlay.remove();
+            }
+
             // Περιμένουμε να φορτωθεί η εικόνα για να πάρουμε τις πραγματικές διαστάσεις
             image.onload = function() {
                 const imgWidth = image.naturalWidth;
@@ -1411,6 +2122,7 @@
                 
                 // Δημιουργούμε ένα overlay container
                 const overlay = document.createElement('div');
+                overlay.className = 'highlight-overlay';
                 overlay.style.position = 'absolute';
                 overlay.style.top = '0';
                 overlay.style.left = '0';
@@ -1429,35 +2141,14 @@
                     
                     // Προσθέτουμε event listener για κλικ
                     highlight.addEventListener('click', function() {
-                        if (area.title === "Χάρτης Καλλιθέας") {
-                            // Εμφάνιση της σελίδας του χάρτη
-                            document.getElementById('collection1-page').style.display = 'none';
-                            document.getElementById('kallithea-map-page').style.display = 'block';
-                            window.scrollTo(0, 0);
-                        } else if (area.title === "Μακέτες Εισόδου - Πυλών") {
-                            // Εμφάνιση της σελίδας των μακετών
-                            document.getElementById('collection1-page').style.display = 'none';
-                            document.getElementById('gates-page').style.display = 'block';
-                            window.scrollTo(0, 0);
-                        } else if (area.title === "Η Αγορά του Κάστρου") {
-                            // Εμφάνιση της σελίδας της αγοράς
-                            document.getElementById('collection1-page').style.display = 'none';
-                            document.getElementById('agora-page').style.display = 'block';
-                            window.scrollTo(0, 0);
-                        } else if (area.title === "Ευρήματα 1") {
-                            // Εμφάνιση της σελίδας των ευρημάτων
-                            document.getElementById('collection1-page').style.display = 'none';
-                            document.getElementById('evrimata1-page').style.display = 'block';
-                            window.scrollTo(0, 0);
-                        } else if (area.title === "Το Κτήριο 10") {
-                            // Εμφάνιση της σελίδας του κτηρίου
-                            document.getElementById('collection1-page').style.display = 'none';
-                            document.getElementById('ktirio10-page').style.display = 'block';
-                            window.scrollTo(0, 0);
-                        } else if (area.title === "Κεραμικά Ευρήματα") {
-                            // Εμφάνιση της σελίδας των κεραμικών
-                            document.getElementById('collection1-page').style.display = 'none';
-                            document.getElementById('keramika-page').style.display = 'block';
+                        const targetPage = document.getElementById(area.pageId);
+                        if (targetPage) {
+                            // Απόκρυψη όλων των σελίδων
+                            const allPages = document.querySelectorAll('.container');
+                            allPages.forEach(p => p.style.display = 'none');
+                            
+                            // Εμφάνιση της επιλεγμένης σελίδας
+                            targetPage.style.display = 'block';
                             window.scrollTo(0, 0);
                         }
                     });
