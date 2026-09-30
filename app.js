@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         '5': document.getElementById('collection5-page'),
         '6': document.getElementById('collection6-page')
     };
-    const areaMap = {
+    window.areaMap = {
         '1': areas1,
         '2': areas2,
         '3': areas3,
@@ -98,13 +98,16 @@ document.addEventListener('DOMContentLoaded', function () {
             showPage(page);
 
             // Create hotspots after page becomes visible
+            // Create hotspots after page becomes visible
             setTimeout(() => {
-                const container = document.getElementById('image-container-' + id);
-                const img = document.getElementById('main-image-' + id);
+                // Collection 1 δεν έχει suffix στο HTML
+                const suffix = id === '1' ? '' : '-' + id;
+                const container = document.getElementById('image-container' + suffix);
+                const img = document.getElementById('main-image' + suffix);
                 if (container && img) {
                     createHighlightsAndLabels(container, img, areaMap[id]);
                 }
-            }, 120);
+            }, 200);
         });
     });
 
@@ -179,6 +182,15 @@ document.addEventListener('DOMContentLoaded', function () {
 // CREATE HIGHLIGHTS AND LABELS
 // ============================================================
 function createHighlightsAndLabels(container, image, areas) {
+
+    console.log('[hotspots] Called with:', {
+        containerId: container.id,
+        imgId: image.id,
+        areasCount: areas ? areas.length : 0,
+        imgComplete: image.complete,
+        imgNatural: image.naturalWidth + 'x' + image.naturalHeight,
+        containerSize: container.clientWidth + 'x' + container.clientHeight
+    });
 
     // Remove existing overlay if any
     const existing = container.querySelector('.highlight-overlay');
@@ -262,3 +274,27 @@ function createHighlightsAndLabels(container, image, areas) {
         image.addEventListener('load', build, { once: true });
     }
 }
+
+/* ============================================================
+   RECREATE HOTSPOTS ON RESIZE
+   ============================================================ */
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        // Βρες ποια collection page είναι ορατή αυτή τη στιγμή
+        const visiblePage = Array.from(document.querySelectorAll('.container'))
+            .find(p => p.style.display === 'block' && p.id.startsWith('collection') && p.id !== 'collection1-page' || p.id === 'collection1-page' && p.style.display === 'block');
+
+        if (!visiblePage) return;
+
+        const id = visiblePage.id.replace('collection', '').replace('-page', '');
+        const suffix = id === '1' ? '' : '-' + id;
+        const container = document.getElementById('image-container' + suffix);
+        const img = document.getElementById('main-image' + suffix);
+
+        if (container && img && window.areaMap && window.areaMap[id]) {
+            createHighlightsAndLabels(container, img, window.areaMap[id]);
+        }
+    }, 250);
+});
